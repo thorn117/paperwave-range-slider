@@ -8,14 +8,14 @@
 
 ### Installation
 ```
-npm install --save @TODO
+npm i paperwave-range-slider
 ```
 ### In a html file
 ```html
 <html>
   <head>
     <script type="module">
-      import '@TODO/paper-range-slider/paper-range-slider.js';
+      import '@paperwave-range-slider/paperwave-range-slider.js';
     </script>
   </head>
   <body>
@@ -32,7 +32,7 @@ npm install --save @TODO
 ### In a Polymer 3 element
 ```js
 import {PolymerElement, html} from '@polymer/polymer';
-import '@TODO/paper-slider/paper-slider.js';
+import '@paperwave-slider/paper-slider.js';
 
 class SampleElement extends PolymerElement {
   static get template() {
