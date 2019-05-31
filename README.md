@@ -1,21 +1,53 @@
-# \<paper-range-slider\>
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/owner/my-element)
 
-paper-range-slider allows users to select a range of a range by moving the slider thumbs.
+## \<paper-range-slider\>
 
-## Install the Polymer-CLI
+\<paper-range-slider\> allows users to select a sub-range by moving the slider knots. It builds up on the official paper-slider component and provides all its the styling properties. The interactive nature of the slider makes it a great choice for picking price ranges.
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) and npm (packaged with [Node.js](https://nodejs.org)) installed. Run `npm install` to install your element's dependencies, then run `polymer serve` to serve your element locally.
+## Usage
 
-## Viewing Your Element
-
+### Installation
 ```
-$ polymer serve
+npm install --save @TODO
+```
+### In a html file
+```html
+<html>
+  <head>
+    <script type="module">
+      import '@TODO/paper-range-slider/paper-range-slider.js';
+    </script>
+  </head>
+  <body>
+    <paper-range-slider
+        min="0"
+        max="150"
+        lowValue="30"
+        highValue="90"
+        minInterval="20">
+    </paper-range-slider>
+  </body>
+</html>
+```
+### In a Polymer 3 element
+```js
+import {PolymerElement, html} from '@polymer/polymer';
+import '@TODO/paper-slider/paper-slider.js';
+
+class SampleElement extends PolymerElement {
+  static get template() {
+    return html`
+      <paper-range-slider
+        min="0"
+        max="150"
+        lowValue="30"
+        highValue="90"
+        minInterval="20">
+    </paper-range-slider>
+    `;
+  }
+}
+customElements.define('sample-element', SampleElement);
 ```
 
-## Running Tests
-
-```
-$ polymer test
-```
-
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+### Thank you for your interest :)
