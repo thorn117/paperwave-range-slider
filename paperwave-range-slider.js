@@ -156,4 +156,4 @@ class PaperwaveRangeSlider extends PolymerElement {
 
 }
 
-window.customElements.define('paperwave-range-slider', PaperWaveRangeSlider);
+window.customElements.define('paperwave-range-slider', PaperwaveRangeSlider);
