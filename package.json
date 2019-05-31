@@ -1,7 +1,7 @@
 {
-  "name": "paper-range-slider",
-  "description": "paper-range-slider allows users to select a sub-range by moving the slider knobs.",
-  "main": "paper-range-slider.js",
+  "name": "paperwave-range-slider",
+  "description": "paperwave-range-slider allows users to select a sub-range by moving the slider knobs.",
+  "main": "paperwave-range-slider.js",
   "version": "1.0.0",
   "dependencies": {
     "@polymer/paper-slider": "github:PolymerElements/paper-slider",

@@ -1,5 +1,5 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-import '../paper-range-slider.js'
+import '../paperwave-range-slider.js'
 
 /**
  * @customElement
@@ -15,7 +15,7 @@ class EventsTest extends PolymerElement {
 
       </style>
 
-      <paper-range-slider on-high-value-changed="_handle" on-low-value-changed="_handle"></paper-range-slider>
+      <paperwave-range-slider on-high-value-changed="_handle" on-low-value-changed="_handle"></paperwave-range-slider>
     `;
   }
 

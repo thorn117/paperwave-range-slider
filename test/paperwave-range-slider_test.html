@@ -12,7 +12,7 @@
     <script src="../node_modules/chai/chai.js"></script>
     <script src="../node_modules/wct-mocha/wct-mocha.js"></script>
 
-    <script type="module" src="../paper-range-slider.js"></script>
+    <script type="module" src="../paperwave-range-slider.js"></script>
   </head>
   <body>
 
@@ -24,12 +24,12 @@
 
     <test-fixture id="ChangedPropertyTestFixture">
       <template>
-        <paper-range-slider prop1="new-prop1"></paper-range-slider>
+        <paperwave-range-slider prop1="new-prop1"></paperwave-range-slider>
       </template>
     </test-fixture>
 
     <script type="module">
-      suite('paper-range-slider', () => {
+      suite('paperwave-range-slider', () => {
 
         test('instantiating the element with default properties works', () => {
           const element = fixture('BasicTestFixture');

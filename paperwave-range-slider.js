@@ -17,7 +17,7 @@ import '@polymer/paper-slider/paper-slider.js'
  * @polymer
  * @demo demo/index.html
  */
-class PaperRangeSlider extends PolymerElement {
+class PaperwaveRangeSlider extends PolymerElement {
   static get template() {
     return html`
       <style>
@@ -156,4 +156,4 @@ class PaperRangeSlider extends PolymerElement {
 
 }
 
-window.customElements.define('paper-range-slider', PaperRangeSlider);
+window.customElements.define('paperwave-range-slider', PaperWaveRangeSlider);

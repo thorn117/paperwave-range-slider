@@ -1,6 +1,6 @@
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/owner/my-element)
 
-## \<paper-range-slider\>
+## \<paperwave-range-slider\>
 
 \<paper-range-slider\> allows users to select a sub-range by moving the slider knobs. It builds up on the official paper-slider component and provides all its the styling properties. The interactive nature of the slider makes it a great choice for picking price ranges.
 
@@ -19,13 +19,13 @@ npm install --save @TODO
     </script>
   </head>
   <body>
-    <paper-range-slider
+    <paperwave-range-slider
         min="0"
         max="150"
         lowValue="30"
         highValue="90"
         minInterval="20">
-    </paper-range-slider>
+    </paperwave-range-slider>
   </body>
 </html>
 ```
@@ -37,13 +37,13 @@ import '@TODO/paper-slider/paper-slider.js';
 class SampleElement extends PolymerElement {
   static get template() {
     return html`
-      <paper-range-slider
+      <paperwave-range-slider
         min="0"
         max="150"
         lowValue="30"
         highValue="90"
         minInterval="20">
-    </paper-range-slider>
+    </paperwave-range-slider>
     `;
   }
 }

@@ -12,7 +12,7 @@ contact: https://paperwave.xyz
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>paper-range-slider demo</title>
+    <title>paperwave-range-slider demo</title>
 
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
@@ -21,7 +21,7 @@ contact: https://paperwave.xyz
       import '@polymer/iron-demo-helpers/demo-snippet';
     </script>
 
-    <script type="module" src="../paper-range-slider.js"></script>
+    <script type="module" src="../paperwave-range-slider.js"></script>
 
 
     <custom-style>
@@ -35,7 +35,7 @@ contact: https://paperwave.xyz
       <h3>Basic paper-range-slider demo</h3>
       <demo-snippet>
         <template>
-          <paper-range-slider></paper-range-slider>
+          <paperwave-range-slider></paperwave-range-slider>
         </template>
       </demo-snippet>
     </div>
@@ -45,24 +45,24 @@ contact: https://paperwave.xyz
         <demo-snippet>
           <template>
             <style is="custom-style">
-              paper-range-slider.knob-pin-colors {
+              paperwave-range-slider.knob-pin-colors {
                 --paper-slider-knob-color-min: var(--paper-green-500);
                 --paper-slider-knob-color-max: var(--paper-red-500);
                 --paper-slider-pin-color-min: var(--paper-green-500);
                 --paper-slider-pin-color-max: var(--paper-red-500);
               }
-              paper-range-slider.paper-slider-properties {
+              paperwave-range-slider.paper-slider-properties {
                 --paper-slider-container-color: black;
                 --paper-slider-active-color: var(--paper-green-500);
               }
 
             </style>
-            <paper-range-slider class="knob-pin-colors paper-slider-properties"
+            <paperwave-range-slider class="knob-pin-colors paper-slider-properties"
               low-value="20" 
               high-value="80" 
               min-interval=25 
               pin>
-            </paper-range-slider>
+            </paperwave-range-slider>
           </template>
         </demo-snippet>
       </div>
