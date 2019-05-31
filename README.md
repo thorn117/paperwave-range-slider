@@ -2,7 +2,7 @@
 
 ## \<paper-range-slider\>
 
-\<paper-range-slider\> allows users to select a sub-range by moving the slider knots. It builds up on the official paper-slider component and provides all its the styling properties. The interactive nature of the slider makes it a great choice for picking price ranges.
+\<paper-range-slider\> allows users to select a sub-range by moving the slider knobs. It builds up on the official paper-slider component and provides all its the styling properties. The interactive nature of the slider makes it a great choice for picking price ranges.
 
 ## Usage
 
