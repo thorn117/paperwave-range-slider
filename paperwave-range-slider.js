@@ -12,10 +12,36 @@ import '@polymer/paper-slider/paper-slider.js'
 /**
  * `paper-range-slider`
  * paper-range-slider allows users to select a range of a range by moving the slider thumbs.
- *
+ * Material design:
+ * [Sliders](https://www.google.com/design/spec/components/sliders.html)
+ * Use `min` and `max` to specify the slider range.  Default is 0 to 100.
+ * Example:
+ *     <paperwave-range-slider min="10" max="200" value="110"></paperwave-range-slider>
+ * ### Styling
+ * The following custom properties and mixins are available for styling:
+ * Custom property | Description | Default
+ * ----------------|-------------|----------
+ * `--paper-slider-knob-color-min` | The min knob color | `--paper-blue-700`
+ * `--paper-slider-knob-color-max` | The max knob color | `--paper-blue-700` 
+ * `--paper-slider-pin-color-min` | The min pin color | `--paper-blue-700`
+ * `--paper-slider-pin-color-max` | The max pin color | `--paper-blue-700` 
+ * `--paper-slider-container-color` | The background color of the bar | `--paper-grey-400`
+ * `--paper-slider-bar-color` | The background color of the slider | `transparent`
+ * `--paper-slider-active-color` | The progress bar color | `--google-blue-700`
+ * `--paper-slider-secondary-color` | The secondary progress bar color | `--google-blue-300`
+ * `--paper-slider-knob-color` | The knob color | `--google-blue-700`
+ * `--paper-slider-disabled-knob-color` | The disabled knob color | `--paper-grey-400`
+ * `--paper-slider-pin-color` | The pin color | `--google-blue-700`
+ * `--paper-slider-disabled-active-color` | The disabled progress bar color | `--paper-grey-400`
+ * `--paper-slider-disabled-secondary-color` | The disabled secondary progress bar color | `--paper-grey-400`
+ * `--paper-slider-knob-start-color` | The fill color of the knob at the far left | `transparent`
+ * `--paper-slider-knob-start-border-color` | The border color of the knob at the far left | `--paper-grey-400`
+ * `--paper-slider-pin-start-color` | The color of the pin at the far left | `--paper-grey-400`
+ * `--paper-slider-height` | Height of the progress bar | `2px`
  * @customElement
  * @polymer
  * @demo demo/index.html
+ * 
  */
 class PaperwaveRangeSlider extends PolymerElement {
   static get template() {
@@ -60,40 +86,66 @@ class PaperwaveRangeSlider extends PolymerElement {
 
   static get properties() {
     return {
+      /**
+       * The minimum interval between the min- and max value
+       */
       minInterval: {
         type: Number,
         value: 1,
         observer: '_minIntervalChanged'
       },
+      /**
+       * The lowest vaue of the selected interval
+       */
       lowValue: {
         type: Number,
         value: 0,
         observer: '_lowValueChange'
       },
+      /**
+       * The highest value of the selected interval
+       */
       highValue: {
         type: Number,
         value: 100,
         observer: '_highValueChange'
       },
+      /**
+       * The maximum value of the range
+       */
       max: {
         type: Number,
         value: 100,
         observer: '_maxChanged'
       },
+      /**
+       * The minimum value of the range
+       */
       min: {
         type: Number,
         value: 0,
         observer: '_minChanged'
       },
+      /**
+       * Disables the element
+       */
       disabled: {
         type: Boolean,
         value: false,
         observer: '_disabledChanged'
       },
+      /**
+       * If true, a pin with numeric value label is shown when the slider thumb
+       * is pressed. Use for settings for which users need to know the exact
+       * value of the setting.
+       */
       pin: {
         type: Boolean,
         value: false
       },
+      /**
+       * The step size which the slider can be moved
+       */
       step: {
         type: Number,
         value: 1,
@@ -154,6 +206,52 @@ class PaperwaveRangeSlider extends PolymerElement {
     this.dispatchEvent(new CustomEvent('step-changed', {detail: this.step}));
   }
 
+  /**
+   * ### events 
+   * events pass their updated data in the <event>.detail attribtue e.g:
+   * '''
+   * <paperwave-range-slider on-low-value-changed="_lowValueChanged"></paperwave-range-slider>
+   * <!--...-->
+   * _lowValueChanged(e) {
+   *  newLowValue = e.detail:
+   * }
+   * '''
+   */
+
+  /**
+   * Fired when the lowValue changed
+   * @event low-value-changed
+   */
+
+  /**
+   * Fired when the highValue changed
+   * @event high-value-changed
+   */
+
+  /**
+   * Fired when the minInterval changed
+   * @event min-interval-changed
+   */
+
+  /**
+   * Fired when the max changed
+   * @event max-changed
+   */
+
+  /**
+   * Fired when the min changed
+   * @event min-changed
+   */
+
+  /**
+   * Fired when disabled changed
+   * @event disabled-changed
+   */
+
+  /**
+   * Fired when the step size changed
+   * @event step-changed
+   */
 }
 
 window.customElements.define('paperwave-range-slider', PaperwaveRangeSlider);

@@ -9,8 +9,9 @@
     "double"
   ],
   "main": "paperwave-range-slider.js",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "dependencies": {
+    "@polymer/iron-component-page": "^3.0.0-pre.20",
     "@polymer/paper-slider": "^3.0.1",
     "@polymer/polymer": "^3.0.0"
   },
