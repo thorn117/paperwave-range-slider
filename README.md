@@ -1,4 +1,4 @@
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/owner/my-element)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/paperwave-range-slider)
 
 ## \<paperwave-range-slider\>
 
@@ -15,7 +15,7 @@ npm i paperwave-range-slider
 <html>
   <head>
     <script type="module">
-      import '@paperwave-range-slider/paperwave-range-slider.js';
+      import 'paperwave-range-slider/paperwave-range-slider.js';
     </script>
   </head>
   <body>
@@ -32,7 +32,7 @@ npm i paperwave-range-slider
 ### In a Polymer 3 element
 ```js
 import {PolymerElement, html} from '@polymer/polymer';
-import '@paperwave-slider/paper-slider.js';
+import 'paperwave-range-slider/paperwave-range-slider.js';
 
 class SampleElement extends PolymerElement {
   static get template() {
