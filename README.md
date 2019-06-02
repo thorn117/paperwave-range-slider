@@ -1,10 +1,10 @@
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/paperwave-range-slider)
 
-## \<paperwave-range-slider\>
+## \<paperwave-range-slider\> (Polymer 3 element)
 
 \<paperwave-range-slider\> allows users to select a sub-range by moving the slider knobs. It builds up on the official paper-slider component and provides most of its styling properties. The interactive nature of the slider makes it a great choice for picking price or year ranges.
 
-[Demo](https://www.webcomponents.org/element/paperwave-range-slider/demo/demo/index.html)
+[Demo](https://www.webcomponents.org/element/paperwave-range-slider/demo/demo/index.html), [Docs](https://www.webcomponents.org/element/paperwave-range-slider/elements/paperwave-range-slider)
 
 
 ## Usage

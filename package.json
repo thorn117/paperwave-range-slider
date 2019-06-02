@@ -6,10 +6,12 @@
     "polymer",
     "slider",
     "range",
-    "double"
+    "double",
+    "paper",
+    "material"
   ],
   "main": "paperwave-range-slider.js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "dependencies": {
     "@polymer/iron-component-page": "^3.0.0-pre.20",
     "@polymer/paper-slider": "^3.0.1",
