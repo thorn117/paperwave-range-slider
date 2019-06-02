@@ -10,38 +10,43 @@ import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import '@polymer/paper-slider/paper-slider.js'
 
 /**
- * `paper-range-slider`
- * paper-range-slider allows users to select a range of a range by moving the slider thumbs.
- * Material design:
- * [Sliders](https://www.google.com/design/spec/components/sliders.html)
- * Use `min` and `max` to specify the slider range.  Default is 0 to 100.
- * Example:
- *     <paperwave-range-slider min="10" max="200" value="110"></paperwave-range-slider>
- * ### Styling
- * The following custom properties and mixins are available for styling:
- * Custom property | Description | Default
- * ----------------|-------------|----------
- * `--paper-slider-knob-color-min` | The min knob color | `--paper-blue-700`
- * `--paper-slider-knob-color-max` | The max knob color | `--paper-blue-700` 
- * `--paper-slider-pin-color-min` | The min pin color | `--paper-blue-700`
- * `--paper-slider-pin-color-max` | The max pin color | `--paper-blue-700` 
- * `--paper-slider-container-color` | The background color of the bar | `--paper-grey-400`
- * `--paper-slider-bar-color` | The background color of the slider | `transparent`
- * `--paper-slider-active-color` | The progress bar color | `--google-blue-700`
- * `--paper-slider-secondary-color` | The secondary progress bar color | `--google-blue-300`
- * `--paper-slider-knob-color` | The knob color | `--google-blue-700`
- * `--paper-slider-disabled-knob-color` | The disabled knob color | `--paper-grey-400`
- * `--paper-slider-pin-color` | The pin color | `--google-blue-700`
- * `--paper-slider-disabled-active-color` | The disabled progress bar color | `--paper-grey-400`
- * `--paper-slider-disabled-secondary-color` | The disabled secondary progress bar color | `--paper-grey-400`
- * `--paper-slider-knob-start-color` | The fill color of the knob at the far left | `transparent`
- * `--paper-slider-knob-start-border-color` | The border color of the knob at the far left | `--paper-grey-400`
- * `--paper-slider-pin-start-color` | The color of the pin at the far left | `--paper-grey-400`
- * `--paper-slider-height` | Height of the progress bar | `2px`
- * @customElement
- * @polymer
- * @demo demo/index.html
- * 
+`paperwave-range-slider`  (Polymer 3) allows users to select a sub-range of a given wider range by moving the slider knobs.
+
+Material design:
+
+[Sliders](https://www.google.com/design/spec/components/sliders.html)
+Use `min` and `max` to specify the slider range.  Default is 0 to 100.
+
+Example:
+
+    `<paperwave-range-slider min="10" max="80"></paperwave-range-slider>`
+
+### Styling
+
+The following custom properties and mixins are available for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--paper-slider-knob-color-min` | The min knob color | `--paper-blue-700`
+`--paper-slider-knob-color-max` | The max knob color | `--paper-blue-700` 
+`--paper-slider-pin-color-min` | The min pin color | `--paper-blue-700`
+`--paper-slider-pin-color-max` | The max pin color | `--paper-blue-700` 
+`--paper-slider-container-color` | The background color of the bar | `--paper-grey-400`
+`--paper-slider-bar-color` | The background color of the slider | `transparent`
+`--paper-slider-active-color` | The progress bar color | `--google-blue-700`
+`--paper-slider-secondary-color` | The secondary progress bar color | `--google-blue-300`
+`--paper-slider-knob-color` | The knob color | `--google-blue-700`
+`--paper-slider-disabled-knob-color` | The disabled knob color | `--paper-grey-400`
+`--paper-slider-pin-color` | The pin color | `--google-blue-700`
+`--paper-slider-disabled-active-color` | The disabled progress bar color | `--paper-grey-400`
+`--paper-slider-disabled-secondary-color` | The disabled secondary progress bar color | `--paper-grey-400`
+`--paper-slider-knob-start-color` | The fill color of the knob at the far left | `transparent`
+`--paper-slider-knob-start-border-color` | The border color of the knob at the far left | `--paper-grey-400`
+`--paper-slider-pin-start-color` | The color of the pin at the far left | `--paper-grey-400`
+`--paper-slider-height` | Height of the progress bar | `2px`
+
+@element paperwave-range-slider
+@demo demo/index.html
  */
 class PaperwaveRangeSlider extends PolymerElement {
   static get template() {
@@ -92,7 +97,8 @@ class PaperwaveRangeSlider extends PolymerElement {
       minInterval: {
         type: Number,
         value: 1,
-        observer: '_minIntervalChanged'
+        observer: '_minIntervalChanged',
+        notify: true
       },
       /**
        * The lowest vaue of the selected interval
@@ -100,7 +106,8 @@ class PaperwaveRangeSlider extends PolymerElement {
       lowValue: {
         type: Number,
         value: 0,
-        observer: '_lowValueChange'
+        observer: '_lowValueChange',
+        notify: true
       },
       /**
        * The highest value of the selected interval
@@ -108,7 +115,8 @@ class PaperwaveRangeSlider extends PolymerElement {
       highValue: {
         type: Number,
         value: 100,
-        observer: '_highValueChange'
+        observer: '_highValueChange',
+        notify: true
       },
       /**
        * The maximum value of the range
@@ -116,7 +124,8 @@ class PaperwaveRangeSlider extends PolymerElement {
       max: {
         type: Number,
         value: 100,
-        observer: '_maxChanged'
+        observer: '_maxChanged',
+        notify: true
       },
       /**
        * The minimum value of the range
@@ -124,7 +133,8 @@ class PaperwaveRangeSlider extends PolymerElement {
       min: {
         type: Number,
         value: 0,
-        observer: '_minChanged'
+        observer: '_minChanged',
+        notify: true
       },
       /**
        * Disables the element
@@ -132,7 +142,8 @@ class PaperwaveRangeSlider extends PolymerElement {
       disabled: {
         type: Boolean,
         value: false,
-        observer: '_disabledChanged'
+        observer: '_disabledChanged',
+        notify: true
       },
       /**
        * If true, a pin with numeric value label is shown when the slider thumb
@@ -141,7 +152,8 @@ class PaperwaveRangeSlider extends PolymerElement {
        */
       pin: {
         type: Boolean,
-        value: false
+        value: false,
+        notify: true
       },
       /**
        * The step size which the slider can be moved
@@ -149,7 +161,8 @@ class PaperwaveRangeSlider extends PolymerElement {
       step: {
         type: Number,
         value: 1,
-        observer: '_stepChanged'
+        observer: '_stepChanged',
+        notify: true
       },
     };
   }
