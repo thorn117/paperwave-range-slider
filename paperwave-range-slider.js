@@ -68,7 +68,7 @@ class PaperwaveRangeSlider extends PolymerElement {
         }
 
       </style>
-      <paper-slider id="min-slider" 
+      <paper-slider part="min-slider" id="min-slider" 
           min={{min}}
           max={{max}}
           disabled="{{disabled}}"
@@ -77,7 +77,7 @@ class PaperwaveRangeSlider extends PolymerElement {
           immediate-value={{lowValue}}
           value={{lowValue}}>
       </paper-slider>
-      <paper-slider id="max-slider" 
+      <paper-slider part="max-slider" id="max-slider" 
           min={{min}}
           max={{max}}
           disabled="{{disabled}}"
