@@ -22,7 +22,7 @@
     "@polymer/test-fixture": "^4.0.2",
     "@webcomponents/webcomponentsjs": "^2.0.0",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0",
+    "mocha": "^10.1.0",
     "wct-mocha": "^1.0.0"
   },
   "repository": {
